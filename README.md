@@ -2,7 +2,7 @@
 
 ## Objective
 
-The Arduino Servos Light Countdown project is aimed to establish a light color switch controlled by a servo motor acting as a clock. The primary focus was to test out the LEDs on/off commands and switching between each one base on the direction the servo motor was present.
+The Arduino Servos Light Countdown project is aimed to establish a light color switch controlled by a servo motor acting as a clock. The primary focus was to test out the LEDs on/off commands and switching between each one base on the direction the servo motor was present at.
 
 ### Skills Learned
 [Bullet Points - Remove this afterwards]
