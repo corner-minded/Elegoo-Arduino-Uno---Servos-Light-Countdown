@@ -2,7 +2,7 @@
 
 ## Objective
 
-The Arduino Servos Light Countdown project aimed to establish a light color stitch controlled by a servo motor acting as a clock. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
+The Arduino Servos Light Countdown project aimed to establish a light color switch controlled by a servo motor acting as a clock. The primary focus was to test out the LED on/off commands and switching between each one base on the direction the servo motor was present.
 
 ### Skills Learned
 [Bullet Points - Remove this afterwards]
