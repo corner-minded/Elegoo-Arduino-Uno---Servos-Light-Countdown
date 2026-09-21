@@ -14,11 +14,9 @@ The Arduino Servos Light Countdown project is aimed to establish a light color s
 - Development of critical thinking and problem-solving skills in cybersecurity.
 
 ### Tools Used
-[Bullet Points - Remove this afterwards]
 
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Network analysis tools (such as Wireshark) for capturing and examining network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
+- Open-source development environment tools for writing and uploading code to the Arduino.
+- Arduino programming kit to construct the project.
 
 ## Steps
 drag & drop screenshots here or use imgur and reference them using imgsrc
