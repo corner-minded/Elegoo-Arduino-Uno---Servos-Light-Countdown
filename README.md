@@ -16,7 +16,7 @@ The Arduino Servos Light Countdown project is aimed to establish a light color s
 ### Tools Used
 
 - Open-source development environment tools for writing and uploading code to the Arduino.
-- Arduino programming kit to construct the project.
+- A Arduino programming kit to construct the project.
 
 ## Steps
 drag & drop screenshots here or use imgur and reference them using imgsrc
