@@ -5,7 +5,6 @@
 The Arduino Servos Light Countdown project is aimed to establish a light color switch controlled by a servo motor acting as a clock. The primary focus was to test out the LEDs on/off commands and switching between each one base on the direction the servo motor was present at.
 
 ### Skills Learned
-[Bullet Points - Remove this afterwards]
 
 - Advanced understanding of SIEM concepts and practical application.
 - Proficiency in analyzing and interpreting network logs.
@@ -19,10 +18,9 @@ The Arduino Servos Light Countdown project is aimed to establish a light color s
 - An Arduino programming kit to construct the project.
 
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
 
-Every screenshot should have some text explaining what the screenshot is about.
+### Arduino Diagram
 
-Example below.
+<img width="750" height="600" alt="image" src="https://github.com/user-attachments/assets/d47f9621-67b7-4d1e-8e55-cbdfb66059e1" />
 
-*Ref 1: Network Diagram*
+This Diagram shows how the Arduino is planed through, 
