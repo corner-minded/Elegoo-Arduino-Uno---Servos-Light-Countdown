@@ -30,3 +30,4 @@ This diagram shows how the Arduino complete light countdown should look like, I 
 - 5x LED
 - 5x Resistor (220)
 - Servo Motor (SG90)
+
