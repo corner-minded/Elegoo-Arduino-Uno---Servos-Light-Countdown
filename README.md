@@ -23,4 +23,10 @@ The Arduino Servos Light Countdown project is aimed to establish a light color s
 
 <img width="750" height="600" alt="image" src="https://github.com/user-attachments/assets/d47f9621-67b7-4d1e-8e55-cbdfb66059e1" />
 
-This Diagram shows how the Arduino is planed through, 
+This diagram shows how the Arduino complete light countdown should look like, I will list the items I used in the kit to put this together:
+
+- LAFVIN UNO R3 Board
+- 830 PointBreadboard
+- 5x LED
+- 5x Resistor (220)
+- Servo Motor (SG90)
