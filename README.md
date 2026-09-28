@@ -35,7 +35,7 @@ This diagram shows how the Arduino complete light countdown should look like, I 
 
 Staring off I set up the ground line for the LEDs, placing a black wire shown above in the powered GND pin, then placing the other end in the blue sided pins, allowing that whole side to be ground, then after placing each colored LED, I set one end of the 220 resistors on the blue sided pins and the other over to the row where the negative ends of LEDs were at. 
 
-<img width="812" height="600" alt="660636501-324b3c4c-5bb7-4b94-b874-d1729fd3447d-upscaled-4x" src="https://github.com/user-attachments/assets/9724ddb1-d579-4641-b021-b8724740ac03" />
+<img width="570" height="412" alt="660636501-324b3c4c-5bb7-4b94-b874-d1729fd3447d-upscaled-4x" src="https://github.com/user-attachments/assets/9724ddb1-d579-4641-b021-b8724740ac03" />
 
 Next I get the Servo Motor and attach pin it needs, a ground pin, a power pin, then a digital power pin for the signal, so it will activate once told to from uploading the code into the UNO.
 
