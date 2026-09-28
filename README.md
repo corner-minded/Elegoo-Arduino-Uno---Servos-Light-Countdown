@@ -28,6 +28,9 @@ This diagram shows how the Arduino complete light countdown should look like, I 
 - LAFVIN UNO R3 Board
 - 830 PointBreadboard
 - 5x LED
-- 5x Resistor (220)
+- 5x Resistors (220)
 - Servo Motor (SG90)
 
+<img width="650" height="500" alt="Screenshot2026-09-27213603-upscaled-3x" src="https://github.com/user-attachments/assets/d2d75318-94b1-4914-8f29-ef72c6c2b814" />
+
+Staring off I set up the ground line for the LEDs, placing a black wire shown above in the powered GND pin, then placing the other end in the blue sided pins, allowing that whole side to be ground, then after placing each colored LED, I set one end of the 220 resistors on the blue sided pins and the other over to the row where the negative ends of LEDs were at. 
