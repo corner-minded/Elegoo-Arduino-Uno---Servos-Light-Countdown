@@ -143,3 +143,5 @@ int servoMin = 0;
 int servoPos = 0;
 int timerSeconds = 60;
 ```
+
+This is where we start configuring the motor, the ``` servoDelay ``` is the amount of times stop between tick (for consistently reason I will refer each movement as a tick, and a full rotation as a full tick), delays in javascript go off of milliseconds, so 1000 milliseconds == 1 second. the maximum amount the motor can rotate is 180 degrees, we can allow this full tick by using ```servoMax``` and setting as 180, ```servoMin``` is of course the minimum the motor can allow to be, to get a full tick I will set it at 0. ```servoPos``` is meant to check the position the motor is at and will restart base on the maximum degrees from the ```servoMax``` variable.
