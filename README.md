@@ -54,11 +54,11 @@ int whitePin = 11;
 
 
 //Serbo clock
-int servoDelay=1000;
-int servoMax=180;
-int servoMin=0;
-int servoPos=0;
-int timerSeconds=60;
+int servoDelay= 1000;
+int servoMax= 180;
+int servoMin= 0;
+int servoPos= 0;
+int timerSeconds= 60;
 
 
 void setup() {
@@ -137,9 +137,9 @@ Here in the first line shows the adding of the servo from the library, which wou
 
 ```javascript
 //Serbo clock
-int servoDelay=1000;
-int servoMax=180;
-int servoMin=0;
-int servoPos=0;
-int timerSeconds=60;
+int servoDelay= 1000;
+int servoMax= 180;
+int servoMin= 0;
+int servoPos= 0;
+int timerSeconds= 60;
 ```
