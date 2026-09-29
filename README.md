@@ -121,7 +121,7 @@ void loop() {
 
 Above shows hows the servo and LEDs work from the Arduino programming software, in this part I will breakdown each section, explaining how the code works.
 
-```
+```javascript
 #include <Servo.h>
 
 Servo myServo;
@@ -135,7 +135,7 @@ int whitePin = 11;
 
 Here in the first line shows the adding of the servo from the library, which would allow my Arduino IDE to use Servo commands like the next line, where I make an object for the sevro so I can tell it what to do. base on the comment, we can see each colored LEDs getting stated into a variable based on the digital power pin number each one reside in, this will be used later.
 
-```
+```javascript
 //Serbo clock
 int servoDelay=1000;
 int servoMax=180;
