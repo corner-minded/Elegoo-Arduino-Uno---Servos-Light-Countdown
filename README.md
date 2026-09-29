@@ -39,3 +39,5 @@ Staring off I set up the ground line for the LEDs, placing a black wire shown ab
 
 Next I get the Servo Motor and attach pin it needs, a ground pin, a power pin, then a digital power pin for the signal, so it will activate once told to from uploading the code into the UNO.
 
+### Arduino Code
+
