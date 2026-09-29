@@ -41,3 +41,80 @@ Next I get the Servo Motor and attach pin it needs, a ground pin, a power pin, t
 
 ### Arduino Code
 
+```javascript
+#include <Servo.h>
+
+Servo myServo;
+//LED pins
+int redPin = 3;
+int bluePin = 5;
+int greenPin = 6;
+int yellowPin = 10;
+int whitePin = 11;
+
+
+//Serbo clock
+int servoDelay=1000;
+int servoMax=180;
+int servoMin=0;
+int servoPos=0;
+int timerSeconds=60;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  myServo.attach(13);
+
+  pinMode (redPin, OUTPUT);
+  pinMode (bluePin, OUTPUT);
+  pinMode (greenPin, OUTPUT);
+  pinMode (yellowPin, OUTPUT);
+  pinMode (whitePin, OUTPUT);
+
+  digitalWrite(redPin, LOW);
+  digitalWrite(bluePin, LOW);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(yellowPin, LOW);
+  digitalWrite(whitePin, LOW);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  for (servoPos = servoMin; servoPos <= servoMax; servoPos+= (servoMax/timerSeconds)){
+    myServo.write(servoPos);
+    delay(servoDelay);
+
+
+    if(servoPos == 36){
+      digitalWrite(redPin, HIGH);
+    }
+      else if(servoPos == 72){
+        digitalWrite(redPin, LOW);
+        digitalWrite(bluePin, HIGH);
+     }
+        else if(servoPos == 108){
+          digitalWrite(bluePin, LOW);
+          digitalWrite(greenPin, HIGH);
+        }
+
+          else if(servoPos == 144){
+            digitalWrite(greenPin, LOW);
+            digitalWrite(yellowPin, HIGH);
+          }
+
+            else if(servoPos == 180) {
+              digitalWrite(yellowPin, LOW);
+              digitalWrite(whitePin, HIGH);
+            }
+
+            else if(servoPos == 0){
+              digitalWrite(redPin, LOW);
+              digitalWrite(bluePin, LOW);
+              digitalWrite(greenPin, LOW);
+              digitalWrite(yellowPin, LOW);
+              digitalWrite(whitePin, LOW);
+            }
+
+    }
+}
+```
