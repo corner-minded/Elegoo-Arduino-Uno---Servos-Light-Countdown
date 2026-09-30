@@ -33,7 +33,7 @@ This diagram shows what the Arduino complete light countdown should look like. I
 
 <img width="650" height="500" alt="Screenshot2026-09-27213603-upscaled-3x" src="https://github.com/user-attachments/assets/d2d75318-94b1-4914-8f29-ef72c6c2b814" />
 
-Staring off I set up the ground line for the LEDs, placing a black wire shown above in the powered GND pin, then placing the other end in the blue sided pins, allowing that whole side to be ground, then after placing each colored LED, I set one end of the 220 resistors on the blue sided pins and the other over to the row where the negative ends of LEDs were at. 
+Staring off I set up the ground line for the LEDs, placing a black wire shown above in the powered GND pin, then placing the other end in the blue-sided pins, allowing that whole side to be ground. Then, after placing each colored LED, I set one end of the 220 resistors on the blue-sided pins and the other over to the row where the negative ends of LEDs were. 
 
 <img width="570" height="412" alt="660636501-324b3c4c-5bb7-4b94-b874-d1729fd3447d-upscaled-4x" src="https://github.com/user-attachments/assets/9724ddb1-d579-4641-b021-b8724740ac03" />
 
