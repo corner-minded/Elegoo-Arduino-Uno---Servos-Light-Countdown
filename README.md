@@ -145,3 +145,68 @@ int timerSeconds = 60;
 ```
 
 This is where we start configuring the motor, the ``` servoDelay ``` is the amount of times stop between tick (for consistently reason I will refer each movement as a tick, and a full rotation as a full tick), delays in javascript go off of milliseconds, so 1000 milliseconds == 1 second. the maximum amount the motor can rotate is 180 degrees, we can allow this full tick by using ```servoMax``` and setting as 180. ```servoMin``` is of course the minimum the motor can allow to be, to get a full tick I will set it at 0. ```servoPos``` is meant to check the position the motor is at and will restart base on the maximum degrees from the ```servoMax``` variable. Now the full tick should only take one minute to reach the maximum degrees, neither more nor less than, so I will make a variable ```timerSeconds``` so it can reach a full tick in 60 seconds. All of these variable will be used to help the funtions of the motor and will be used the void loop.
+
+```javascript
+void setup() {
+  // put your setup code here, to run once:
+  myServo.attach(13);
+
+  pinMode (redPin, OUTPUT);
+  pinMode (bluePin, OUTPUT);
+  pinMode (greenPin, OUTPUT);
+  pinMode (yellowPin, OUTPUT);
+  pinMode (whitePin, OUTPUT);
+
+  digitalWrite(redPin, LOW);
+  digitalWrite(bluePin, LOW);
+  digitalWrite(greenPin, LOW);
+  digitalWrite(yellowPin, LOW);
+  digitalWrite(whitePin, LOW);
+}
+```
+
+```myServo.attach(13);``` will connect the servo to the UNO in pin 13. the ```pinMode``` for each color will be of course the output of each interaction from the UNO. the ```LOW``` part in ```digitalWrite``` will tell the UNO not to put power onto the pins yet, they will turn on in the for loop.
+
+```
+void loop() {
+  // put your main code here, to run repeatedly:
+  for (servoPos = servoMin; servoPos <= servoMax; servoPos+= (servoMax/timerSeconds)){
+    myServo.write(servoPos);
+    delay(servoDelay);
+
+
+    if(servoPos == 36){
+      digitalWrite(redPin, HIGH);
+    }
+      else if(servoPos == 72){
+        digitalWrite(redPin, LOW);
+        digitalWrite(bluePin, HIGH);
+     }
+        else if(servoPos == 108){
+          digitalWrite(bluePin, LOW);
+          digitalWrite(greenPin, HIGH);
+        }
+
+          else if(servoPos == 144){
+            digitalWrite(greenPin, LOW);
+            digitalWrite(yellowPin, HIGH);
+          }
+
+            else if(servoPos == 180) {
+              digitalWrite(yellowPin, LOW);
+              digitalWrite(whitePin, HIGH);
+            }
+
+            else if(servoPos == 0){
+              digitalWrite(redPin, LOW);
+              digitalWrite(bluePin, LOW);
+              digitalWrite(greenPin, LOW);
+              digitalWrite(yellowPin, LOW);
+              digitalWrite(whitePin, LOW);
+            }
+
+    }
+}
+```
+
+I will explain the for loop as best as possibly. For reminders, ```servoPos``` tells us the position the motor is at after each tick, this variable is extremely important, because it is used for giving us a starting point, when will it stop and restart the motor, how to calculate the position of the motor, and finally when turn on the LEDs. For the starting point, I will make sure ```servoPos``` be equal to the minimum the motor should start with, which is 0 so I can get a full 180 degrees, The condition will tell ```servoPos``` to continue increasing till it reaches a number that is grater then or equal to the maximum position it can the motor can rotate, which would be 180, and we can set this by using the ```servoMax``` variable to make this condition, lastly if it is less the maximum position, it will keep updating to the next amount of numbers, but this is where things get complicated, what is the next amount? will to get this we would have to use the maximum position it can be ```servoMax``` and the time each tick should take ```timerSeconds```
