@@ -119,7 +119,7 @@ void loop() {
 }
 ```
 
-Above shows how the servo and LEDs work in the Arduino programming software. In this part, I will breakdown each section, explaining how the code works.
+Above shows how the servo and LEDs work in the Arduino programming software. In this part, I will break down each section, explaining how the code works.
 
 ```javascript
 #include <Servo.h>
@@ -144,7 +144,11 @@ int servoPos = 0;
 int timerSeconds = 60;
 ```
 
-This is where we start configuring the motor. The ``` servoDelay ``` is the number of times to stop between ticks (for consistency, I will refer to each movement as a tick, and a full 180 rotation as a full tick). Delays in JavaScript are in milliseconds, so 1000 milliseconds == 1 second. The maximum amount the motor can rotate is 180 degrees; we can allow this full tick by using ```servoMax``` and setting it to 180. ```servoMin``` is, of course, the minimum the motor can be set to; to get a full tick, I will set it to 0. ```servoPos``` is meant to check the position the motor is at and will restart based on the maximum degrees from the ```servoMax``` variable. Now the full tick should only take one minute to reach the maximum degrees, neither more nor less than, so I will make a variable ```timerSeconds``` so it can reach a full tick in 60 seconds. All of these variables will be used to help the functions of the motor and will be used in the void loop.
+This is where we start configuring the motor. The ``` servoDelay ``` is the number of times to stop between ticks (for consistency, I will refer to each movement as a tick, and a full 180 rotation as a full tick). 
+
+Delays in JavaScript are in milliseconds, so 1000 milliseconds == 1 second. The maximum amount the motor can rotate is 180 degrees; we can allow this full tick by using ```servoMax``` and setting it to 180. ```servoMin``` is, of course, the minimum the motor can be set to; to get a full tick, I will set it to 0. ```servoPos``` is meant to check the position the motor is at and will restart based on the maximum degrees from the ```servoMax``` variable. 
+
+Now the full tick should only take one minute to reach the maximum degrees, neither more nor less than, so I will make a variable ```timerSeconds``` so it can reach a full tick in 60 seconds. All of these variables will be used to help the functions of the motor and will be used in the void loop.
 
 ```javascript
 void setup() {
@@ -175,10 +179,13 @@ void loop() {
     delay(servoDelay);
 ```
 
-I will explain the for loop as best as possible. For reminders, ```servoPos``` tells us the position the motor is at after each tick. This variable is extremely important because it is used to give us a starting point, when it will stop and restart the motor, how to calculate the position of the motor, and finally when to turn on the LEDs. For the starting point, I will make sure ```servoPos``` be equal to the minimum the motor should start with, which is 0 so I can get a full 180 degrees, The condition will tell ```servoPos``` to continue increasing till it reaches a number that is grater then or equal to the maximum position it can the motor can rotate, which would be 180, and we can set this by using the ```servoMax``` variable to make this condition, lastly if it is less the maximum position, it will keep updating to the next amount of numbers, but this is where things get complicated, what is the next amount? To get this, we would have to use the maximum position it can be, ```servoMax``` and the time each tick should take, ```timerSeconds```. Each tick is 1000 milliseconds, which is 1 second, we need this to tell how much should change each second, to get this we will divide ```servoMax``` and ```timerSeconds``` to get the quotient of the range of motion of the motor by the number of seconds it should take, with that we have the next value of the ```servoPos``` position.
+I will explain the for loop as best as possible. For reminders, ```servoPos``` tells us the position the motor is at after each tick. This variable is extremely important because it is used to give us a starting point, when it will stop and restart the motor, how to calculate the position of the motor, and finally when to turn on the LEDs. 
+
+For the starting point, I will make sure ```servoPos``` be equal to the minimum the motor should start with, which is 0 so I can get a full 180 degrees, The condition will tell ```servoPos``` to continue increasing till it reaches a number that is grater then or equal to the maximum position it can the motor can rotate, which would be 180, and we can set this by using the ```servoMax``` variable to make this condition, lastly if it is less the maximum position, it will keep updating to the next amount of numbers, but this is where things get complicated, what is the next amount? To get this, we would have to use the maximum position it can be, ```servoMax``` and the time each tick should take, ```timerSeconds```. 
+
+Each tick is 1000 milliseconds, which is 1 second, we need this to tell how much should change each second, to get this we will divide ```servoMax``` and ```timerSeconds``` to get the quotient of the range of motion of the motor by the number of seconds it should take, with that we have the next value of the ```servoPos``` position.
 
 ```
-
     if(servoPos == 36){
       digitalWrite(redPin, HIGH);
     }
