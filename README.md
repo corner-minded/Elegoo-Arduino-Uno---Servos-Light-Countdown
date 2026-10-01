@@ -183,7 +183,9 @@ I will explain the for loop as best as possible. For reminders, ```servoPos``` t
 
 For the starting point, I will make sure ```servoPos``` be equal to the minimum the motor should start with, which is 0 so I can get a full 180 degrees, The condition will tell ```servoPos``` to continue increasing till it reaches a number that is grater then or equal to the maximum position it can the motor can rotate, which would be 180, and we can set this by using the ```servoMax``` variable to make this condition, lastly if it is less the maximum position, it will keep updating to the next amount of numbers, but this is where things get complicated, what is the next amount? To get this, we would have to use the maximum position it can be, ```servoMax``` and the time each tick should take, ```timerSeconds```. 
 
-Each tick is 1000 milliseconds, which is 1 second, we need this to tell how much should change each second, to get this we will divide ```servoMax``` and ```timerSeconds``` to get the quotient of the range of motion of the motor by the number of seconds it should take, with that we have the next value of the ```servoPos``` position.
+Each tick is 1000 milliseconds, which is 1 second. We need this to tell how much should change each second. To get this, we will divide ```servoMax```by ```timerSeconds``` to get the quotient of the range of motion of the motor by the number of seconds it should take; with that, we have the next value of the ```servoPos``` position.
+
+Now, finally they are two more things to add before we start with the if statements: first, we need to add the ```servoPos``` variable to the ```myServo``` object so the motor can move to the position; second, we need to add the 1-second delay between each tick. This can be done by adding the ```servoDelay``` variable inside the ```delay()``` statement.
 
 ```
     if(servoPos == 36){
@@ -219,3 +221,4 @@ Each tick is 1000 milliseconds, which is 1 second, we need this to tell how much
     }
 }
 ```
+
