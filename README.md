@@ -173,7 +173,11 @@ void loop() {
   for (servoPos = servoMin; servoPos <= servoMax; servoPos+= (servoMax/timerSeconds)){
     myServo.write(servoPos);
     delay(servoDelay);
+```
 
+I will explain the for loop as best as possible. For reminders, ```servoPos``` tells us the position the motor is at after each tick. This variable is extremely important because it is used to give us a starting point, when it will stop and restart the motor, how to calculate the position of the motor, and finally when to turn on the LEDs. For the starting point, I will make sure ```servoPos``` be equal to the minimum the motor should start with, which is 0 so I can get a full 180 degrees, The condition will tell ```servoPos``` to continue increasing till it reaches a number that is grater then or equal to the maximum position it can the motor can rotate, which would be 180, and we can set this by using the ```servoMax``` variable to make this condition, lastly if it is less the maximum position, it will keep updating to the next amount of numbers, but this is where things get complicated, what is the next amount? To get this, we would have to use the maximum position it can be, ```servoMax``` and the time each tick should take, ```timerSeconds```. Each tick is 1000 milliseconds, which is 1 second, we need this to tell how much should change each second, to get this we will divide ```servoMax``` and ```timerSeconds``` to get the quotient of the range of motion of the motor by the number of seconds it should take, with that we have the next value of the ```servoPos``` position.
+
+```
 
     if(servoPos == 36){
       digitalWrite(redPin, HIGH);
@@ -208,6 +212,3 @@ void loop() {
     }
 }
 ```
-
-I will explain the for loop as best as possible. For reminders, ```servoPos``` tells us the position the motor is at after each tick. This variable is extremely important because it is used to give us a starting point, when it will stop and restart the motor, how to calculate the position of the motor, and finally when to turn on the LEDs. For the starting point, I will make sure ```servoPos``` be equal to the minimum the motor should start with, which is 0 so I can get a full 180 degrees, The condition will tell ```servoPos``` to continue increasing till it reaches a number that is grater then or equal to the maximum position it can the motor can rotate, which would be 180, and we can set this by using the ```servoMax``` variable to make this condition, lastly if it is less the maximum position, it will keep updating to the next amount of numbers, but this is where things get complicated, what is the next amount? To get this, we would have to use the maximum position it can be, ```servoMax``` and the time each tick should take, ```timerSeconds```. Each tick is 1000 milliseconds, which is 1 second, we need this to tell how much should change each second, to get this we will divide ```servoMax``` and ```timerSeconds``` to get the quotient of the range of motion of the motor by the number of seconds it should take, with that we have the next value of the ```servoPos``` position.
-
