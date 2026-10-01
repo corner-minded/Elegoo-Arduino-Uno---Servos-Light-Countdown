@@ -183,7 +183,7 @@ I will explain the for loop as best as possible. For reminders, ```servoPos``` t
 
 For the starting point, I will make sure ```servoPos``` be equal to the minimum the motor should start with, which is 0 so I can get a full 180 degrees, The condition will tell ```servoPos``` to continue increasing till it reaches a number that is grater then or equal to the maximum position it can the motor can rotate, which would be 180, and we can set this by using the ```servoMax``` variable to make this condition, lastly if it is less the maximum position, it will keep updating to the next amount of numbers, but this is where things get complicated, what is the next amount? To get this, we would have to use the maximum position it can be, ```servoMax``` and the time each tick should take, ```timerSeconds```. 
 
-Each tick is 1000 milliseconds, which is 1 second. We need this to tell how much should change each second. To get this, we will divide ```servoMax```by ```timerSeconds``` to get the quotient of the range of motion of the motor by the number of seconds it should take; with that, we have the next value of the ```servoPos``` position.
+Each tick is 1000 milliseconds, which is 1 second. We need this to tell how much should change each second. To get this, we divide ```servoMax```by ```timerSeconds``` to get the quotient of the range of motion of the motor by the number of seconds it should take; with that, we have the next value of the ```servoPos``` to get the next position.
 
 Now, finally they are two more things to add before we start with the if statements: first, we need to add the ```servoPos``` variable to the ```myServo``` object so the motor can move to the position; second, we need to add the 1-second delay between each tick. This can be done by adding the ```servoDelay``` variable inside the ```delay()``` statement.
 
@@ -221,4 +221,6 @@ Now, finally they are two more things to add before we start with the if stateme
     }
 }
 ```
+
+Finally, the last stretch where I explain the if statements. Now there are 5 LEDs, starting from red, blue, green, yellow, and lastly white; we will use the ```digitalWrite``` statement to turn the LEDs on and off based on the motor's position from the ```servoPos``` variable. When the position number reaches a certain point, an LED will turn off, and the next in line will turn on; the maximum position is 180, so to let all five LEDs shine, I divided 180 by 5 to get the quotient of 36; with this, I started the first if statement to turn on if the position in ```servoPos``` was 36, and used the rest of the else if statements to turn on the next LED and turn off the previous one if the position moved up by 36, and this will fanily end when the ```servoPos``` moves pass the maximum position, where it will resart the motor and ```servoPos``` back to 0, where it will restart the loop all over again, which leads me to finally finish my project.
 
