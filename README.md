@@ -222,5 +222,11 @@ Now, finally they are two more things to add before we start with the if stateme
 }
 ```
 
-Finally, the last stretch where I explain the if statements. Now there are 5 LEDs, starting from red, blue, green, yellow, and lastly white; we will use the ```digitalWrite``` statement to turn the LEDs on and off based on the motor's position from the ```servoPos``` variable. When the position number reaches a certain point, an LED will turn off, and the next in line will turn on; the maximum position is 180, so to let all five LEDs shine, I divided 180 by 5 to get the quotient of 36; with this, I started the first if statement to turn on if the position in ```servoPos``` was 36, and used the rest of the else if statements to turn on the next LED and turn off the previous one if the position moved up by 36, and this will fanily end when the ```servoPos``` moves pass the maximum position, where it will resart the motor and ```servoPos``` back to 0, where it will restart the loop all over again, which leads me to finally finish my project.
+Finally, the last stretch where I explain the if statements. Now there are 5 LEDs, starting from red, blue, green, yellow, and lastly white; we will use the ```digitalWrite``` statement to turn the LEDs on and off based on the motor's position from the ```servoPos``` variable.
+
+When the position number reaches a certain point, an LED will turn off, and the next in line will turn on; the maximum position is 180, so to let all five LEDs shine, I divided 180 by 5 to get the quotient of 36.
+
+With this, I started the first if statement to turn on if the position in ```servoPos``` was 36, and used the rest of the else if statements to turn on the next LED and turn off the previous one if the position moved up by 36. 
+
+This will finally end when the ```servoPos``` moves past the maximum position, where it will restart the motor and set ```servoPos``` back to 0, and it will restart the loop all over again, which leads me to finally finish my project.
 
