@@ -230,3 +230,6 @@ With this, I started the first if statement to turn on if the position in ```ser
 
 This will finally end when the ```servoPos``` moves past the maximum position, where it will restart the motor and set ```servoPos``` back to 0, and it will restart the loop all over again, which leads me to finally finish my project.
 
+###Project Video
+
+https://github.com/user-attachments/assets/2496690e-82db-47f3-88ca-ac6146af856f
