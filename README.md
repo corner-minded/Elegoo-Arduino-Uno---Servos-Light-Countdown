@@ -4,14 +4,6 @@
 
 The Arduino Servos Light Countdown project is aimed at establishing a light color switch controlled by a servo motor acting as a clock. The primary focus was to test out the LEDs' on/off commands and switching between each one based on the direction the servo motor was at.
 
-### Skills Learned
-
-- Advanced understanding of SIEM concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
-
 ### Tools Used
 
 - Open-source development environment tools for writing and uploading code to the Arduino.
